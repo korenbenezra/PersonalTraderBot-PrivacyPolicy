@@ -11,7 +11,7 @@
   <meta name="color-scheme" content="dark light">
   <meta name="referrer" content="no-referrer">
 
-  <!-- Open Graph (no external URL; private repo) -->
+  <!-- Open Graph (no external URL; private hosting/repo) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Personal Trader Bot">
   <meta property="og:title" content="Personal Trader Bot — Privacy Policy">
@@ -30,16 +30,15 @@
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><text y='1em' font-size='96'>🛡️</text></svg>">
 
-  <!-- Assets -->
+  <!-- Optional extra styles if present -->
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/script.js"></script>
 
-  <!-- Structured Data (no URL fields) -->
+  <!-- Structured Data (no external URL fields) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Personal Trader Bot",
+    "name": "Personal Trader Bot — Privacy Policy",
     "description": "Privacy Policy for the Personal Trader Bot: how we collect, use, and protect your data.",
     "datePublished": "2025-08-09",
     "dateModified": "2025-08-09",
@@ -51,8 +50,9 @@
     "inLanguage": "en"
   }
   </script>
+
+  <!-- Critical CSS subset for fast first paint -->
   <style>
-    /* Critical subset for faster first paint; rest in assets/style.css */
     :root {
       --bg: #0b0c10;
       --panel: #12141a;
@@ -103,6 +103,9 @@
     .toplink { position: fixed; right: 1rem; bottom: 1rem; background: var(--panel); border:1px solid var(--border); padding:.5rem .75rem; border-radius: 10px; box-shadow: var(--shadow); }
     @media (max-width: 900px) { .wrap { grid-template-columns: 1fr; } aside { position: static; order: -1; } }
   </style>
+
+  <!-- TOC script (external local asset) -->
+  <script defer src="assets/script.js"></script>
 </head>
 <body>
   <a class="toplink" href="#top" aria-label="Back to top">↑</a>
@@ -115,26 +118,31 @@
         <a class="badge" href="sitemap.xml">sitemap.xml</a>
       </div>
     </aside>
+
     <main>
       <header>
         <h1>Personal Trader Bot — Privacy Policy</h1>
         <div class="meta">
           <span>Effective date: <strong>09 August 2025</strong></span>
-          <span>Version: <strong>1.0</strong></span>
+          <span>Version: <strong>1.2</strong></span>
         </div>
         <p class="callout small">
-          This Privacy Policy explains how the Personal Trader Bot (“we”, “us”, “the Bot”) collects, uses, discloses, and protects your information when you interact with our Telegram bot. It <strong>supplements</strong> Telegram’s privacy terms for third‑party bots and does not replace Telegram’s processing. Telegram remains an independent data controller for the messages and metadata it processes on its platform.
+          This Privacy Policy explains how the Personal Trader Bot (“we”, “us”, “the Bot”) collects, uses, discloses, and protects your information when you interact with our Telegram bot. It <strong>supplements</strong> Telegram’s privacy terms for third-party bots and does not replace Telegram’s processing. Telegram remains an independent data controller for message content and metadata it processes on its platform.
+        </p>
+        <p class="callout small" style="margin-top:1rem">
+          <strong>Legal notice:</strong> The bot is an <em>execution-only</em> and <em>signals</em> tool. It does not provide investment advice, recommendations, or a fiduciary service. Trades (including auto-trading) are executed <strong>only</strong> based on your explicit settings/consents and at your sole risk. We do not guarantee execution, price, timing, profitability, or uninterrupted access.
         </p>
       </header>
 
       <section>
         <h2>1) Introduction &amp; Scope</h2>
+
         <h3>1.1 Service Description</h3>
         <ul>
           <li>Trading signals and notifications</li>
           <li>Portfolio and P&amp;L viewing</li>
           <li>Optional order execution via supported broker APIs (e.g., Alpaca)</li>
-          <li>Manual and opt‑in automated trading workflows</li>
+          <li>Manual and opt-in automated trading workflows</li>
         </ul>
 
         <h3>1.2 Policy Scope</h3>
@@ -143,12 +151,15 @@
         <h3>1.3 Legal Framework (Israel)</h3>
         <p>We process personal data in accordance with Israel’s <em>Protection of Privacy Law, 5741-1981 (PPL)</em> and the <em>Privacy Protection Regulations (Data Security), 5777-2017</em>. Where data is transferred outside Israel, we apply the <em>Privacy Protection Regulations (Transfer of Data to Databases Abroad), 5761-2001</em>. We also align with foreign laws that may apply to you (e.g., GDPR/UK GDPR, CCPA/CPRA). Oversight in Israel is provided by the Israeli Privacy Protection Authority (PPA) and the Registrar of Databases.</p>
 
-        <p><strong>Controller:</strong> Personal Trader Bot<br>
-        <strong>Contact:</strong> koren.benezra10@gmail.com</p>
+        <p><strong>Controller (Legal Entity):</strong> Personal Trader Bot [Ltd.] (Reg. No. [_______])<br>
+        <strong>Database Registration No. (if applicable):</strong> [_______]<br>
+        <strong>Address:</strong> [Street], [City], [Postal Code], Israel<br>
+        <strong>Email:</strong> <a href="mailto:koren.benezra10@gmail.com">koren.benezra10@gmail.com</a></p>
       </section>
 
       <section>
         <h2>2) Data We Collect</h2>
+
         <h3>2.1 Identity Data</h3>
         <ul>
           <li>Telegram user ID (persistent)</li>
@@ -159,14 +170,14 @@
         <h3>2.2 Contact/Interaction Data</h3>
         <ul>
           <li>Phone number (if provided; stored encrypted)</li>
-          <li>Chat/message references (IDs, not full bodies unless necessary)</li>
+          <li>Chat/message references (IDs; we do not store full message bodies unless operationally necessary)</li>
           <li>Admin communications during approval/support</li>
         </ul>
 
         <h3>2.3 Financial Data (Sensitive)</h3>
-        <p><em>Broker Credentials:</em> API keys/secrets, tokens, account IDs (encrypted with AES‑256‑GCM, per‑user keys, unique salts).</p>
+        <p><em>Broker Credentials:</em> API keys/secrets, tokens, account IDs (encrypted with AES-256-GCM, per-user keys, unique salts).</p>
         <p><em>Portfolio &amp; Trading:</em> balances, equity, positions, orders/fills, history; P&amp;L and performance.</p>
-        <p><em>Preferences:</em> risk profile, position sizing rules, watchlists, auto‑trading toggles, SL/TP settings.</p>
+        <p><em>Preferences:</em> risk profile, position sizing rules, watchlists, auto-trading toggles, SL/TP settings.</p>
 
         <h3>2.4 Behavioral/Technical</h3>
         <ul>
@@ -178,6 +189,7 @@
 
       <section>
         <h2>3) How We Collect Data</h2>
+
         <h3>3.1 Direct</h3>
         <ul>
           <li>Registration and approval flows</li>
@@ -202,26 +214,27 @@
       </section>
 
       <section>
-      <h2>4) Legal Basis for Processing</h2>
-      <p>Under Israeli law, we process personal data to operate and secure our regulated database(s) and to provide the services you request. Our bases include:</p>
-      <ul>
-        <li><strong>Contractual necessity</strong> — to deliver core bot functions you request (portfolio sync, order routing, notifications).</li>
-        <li><strong>Legitimate interests</strong> — security, fraud prevention, service improvement, debugging, and audit trail, balanced against your rights.</li>
-        <li><strong>Consent</strong> — for sensitive financial data and any automated trading features; you may withdraw consent at any time (functionality may be limited).</li>
-        <li><strong>Legal obligations</strong> — record-keeping, security controls, and notifications required by Israeli law.</li>
-      </ul>
-
+        <h2>4) Legal Basis for Processing</h2>
+        <p>Under Israeli law, we process personal data to operate and secure our regulated database(s) and to provide the services you request. Our bases include:</p>
+        <ul>
+          <li><strong>Contractual necessity</strong> — to deliver core bot functions you request (portfolio sync, order routing, notifications).</li>
+          <li><strong>Legitimate interests</strong> — security, fraud prevention, service improvement, debugging, and audit trail, balanced against your rights.</li>
+          <li><strong>Consent</strong> — for sensitive financial data and any automated trading features; you may withdraw consent at any time (functionality may be limited).</li>
+          <li><strong>Legal obligations</strong> — record-keeping, security controls, and notifications required by Israeli law.</li>
+        </ul>
       </section>
 
       <section>
         <h2>5) Use of Data</h2>
+
         <h3>5.1 Core</h3>
         <ul>
-          <li>Monitoring/reporting</li>
-          <li>Signals &amp; notifications</li>
-          <li>Order execution &amp; position management</li>
-          <li>Risk sizing/controls</li>
+          <li>Signals &amp; notifications (informational only; not investment advice).</li>
+          <li>Order execution &amp; position management <em>solely</em> per your explicit instruction or pre-set auto-trading rules.</li>
+          <li>Risk sizing/controls enforced strictly by your configured limits (symbols, max quantity/value, price caps, timeouts).</li>
         </ul>
+        <p><strong>Authorization:</strong> By accepting an offer or enabling auto-trading with saved limits, you instruct the bot to place corresponding orders with your connected broker. We will not exceed your limits. If a broker/API error occurs, we will not re-attempt automatically without a fresh instruction.</p>
+        <p><strong>No responsibility for deals:</strong> To the maximum extent permitted by law, you are solely responsible for any trades executed via your account, whether triggered by your manual acceptance or your configured automation.</p>
 
         <h3>5.2 Experience</h3>
         <ul>
@@ -241,23 +254,24 @@
         <ul>
           <li>Registration/approval/subscription</li>
           <li>Troubleshooting</li>
-          <li>Service analytics (aggregate, de‑identified where possible)</li>
+          <li>Service analytics on aggregated or pseudonymized data; we do not attempt to re-identify individuals</li>
         </ul>
       </section>
 
       <section>
         <h2>6) Security</h2>
+
         <h3>6.1 Encryption</h3>
         <ul>
-          <li>AES‑256‑GCM for credentials/sensitive data at rest</li>
-          <li>Per‑user keys and unique salts</li>
+          <li>AES-256-GCM for credentials/sensitive data at rest</li>
+          <li>Per-user keys and unique salts</li>
           <li>TLS for data in transit to/from brokers</li>
           <li>Encrypted database at rest (e.g., SQLite with WAL)</li>
         </ul>
 
         <h3>6.2 Access Controls</h3>
         <ul>
-          <li>Role‑based access; admin‑only user management</li>
+          <li>Role-based access; admin-only user management</li>
           <li>MFA for administrative consoles</li>
           <li>Audit logs for access/modification</li>
         </ul>
@@ -275,21 +289,34 @@
           <li>Cleanup of temp files and expired sessions</li>
           <li>Short retention for diagnostics (see §8)</li>
         </ul>
+
+        <h3>6.5 Secrets &amp; Key Management</h3>
+        <ul>
+          <li>Broker API keys/secrets are stored only in an encrypted secrets vault (envelope encryption; keys managed in a dedicated KMS).</li>
+          <li>Keys are <strong>rotated at least every 90 days</strong> or on suspicion of compromise. Keys are never written to logs or backups in plaintext.</li>
+          <li>Backups are encrypted; recovery restores re-encrypt secrets with new data-keys.</li>
+          <li>We support <em>read-only</em> tokens where possible; trading permissions are explicit and minimal (least privilege).</li>
+          <li>Upon <code>/unsubscribe</code> we immediately revoke/delete broker credentials and invalidate any live tokens.</li>
+        </ul>
+        <p><strong>Your duty:</strong> You must safeguard your broker credentials, in-bot PIN, devices, and Telegram account. If you suspect compromise, revoke credentials in the bot and with your broker, and contact us immediately.</p>
+
+        <p class="small muted">Our database is classified as <strong>[Basic / Medium / High]</strong> under Israel’s Data Security Regulations. Where required, an Information Security Officer is appointed and documented procedures, training, vendor controls, and periodic audits are maintained. We perform periodic vulnerability scanning and independent penetration testing; critical findings are remediated on an expedited schedule. We verify inbound webhooks with shared secrets/signatures, enforce TLS 1.2+, apply IP allow-listing/rate-limits, and protect against replay (timestamps/nonces).</p>
       </section>
 
       <section>
         <h2>7) Sharing &amp; Disclosure</h2>
+
         <h3>7.1 We Don’t</h3>
         <ul>
           <li>Sell or rent your data</li>
-          <li>Do marketing partnerships based on your data</li>
+          <li>Enter marketing partnerships based on your data</li>
         </ul>
 
         <h3>7.2 We May Share With</h3>
         <ul>
           <li>Broker/API providers (e.g., Alpaca) to perform trading and retrieve portfolio data</li>
           <li>Telegram for message delivery</li>
-          <li>Cloud/IT providers under DPAs</li>
+          <li>Cloud/IT and monitoring providers under data-processing agreements</li>
         </ul>
 
         <h3>7.3 Legal</h3>
@@ -304,85 +331,93 @@
         <h2>8) Retention</h2>
         <ul>
           <li>Portfolio &amp; preferences: while account is active</li>
-          <li>Trading history: up to 7 years (regulatory)</li>
+          <li>Trading history: retained only as long as necessary for service, dispute resolution, and legal obligations; if no legal obligation applies, we anonymize or delete after <strong>[e.g., 24 months]</strong>.</li>
           <li>System logs: ≤ 90 days</li>
           <li>Inactivity review after 12 months; credentials deleted after 18 months</li>
-          <li>On request: credentials deleted immediately; 30‑day recovery window (where applicable)</li>
+          <li>On request: credentials deleted immediately; 30-day recovery window (where applicable)</li>
         </ul>
+        <p>Deletion in backups is enforced via cryptographic erasure (keys destroyed) and backup expiration. Backups containing your data are overwritten on rotation and are not used to restore deleted personal data except where legally required (with notice).</p>
+        <p class="small muted">Retention and deletion are carried out in accordance with Israeli law and guidance issued by the PPA.</p>
       </section>
 
       <section>
         <h2>9) Your Rights</h2>
-        <ul>
-          <li><strong>Access</strong>: <code>/export_data</code>, portfolio/history views</li>
-          <li><strong>Rectify</strong>: update profile, watchlists, risk settings</li>
-          <li><strong>Erase</strong>: <code>/unsubscribe</code>; legal holds may apply</li>
-          <li><strong>Portability</strong>: structured exports</li>
-          <li><strong>Restrict/Object</strong> (GDPR)</li>
-          <li><strong>CCPA/CPRA</strong>: know/delete/correct; opt‑out of sale/sharing (we do neither); non‑discrimination</li>
-        </ul>
-        <p>Use in‑bot commands or contact <a href="mailto:koren.benezra10@gmail.com">koren.benezra10@gmail.com</a>. We verify identity and respond within legal timelines.</p>
+
+        <h3>9.1 Access</h3>
+        <p>Use <code>/export_data</code> to request a machine-readable export of your data. For security, exports <strong>exclude</strong> broker secrets and credentials. We can provide a list of connected brokers and token creation dates, not the secret values.</p>
+
+        <h3>9.2 Rectification</h3>
+        <p>Update profile, watchlists, and risk settings via commands or contact us to correct inaccuracies.</p>
+
+        <h3>9.3 Erasure</h3>
+        <p>Use <code>/unsubscribe</code> to close your account and delete stored credentials. We delete other personal data unless retention is legally required.</p>
+
+        <h3>9.4 Portability</h3>
+        <p>We provide exports in a structured, commonly used format.</p>
+
+        <h3>9.5 Rights under Israeli Law</h3>
+        <p>You have the right to review personal data about you held in our database and to request correction of inaccurate, incomplete, or non-up-to-date data. We will respond within 30 days. Deletion requests are handled according to Israeli law and may be limited where retention is legally required (e.g., audit/security logs, financial records).</p>
       </section>
 
       <section>
         <h2>10) Consent</h2>
         <ul>
-          <li>Explicit consent for financial data and auto‑trading (timestamped)</li>
+          <li>Explicit consent for financial data and auto-trading (timestamped)</li>
           <li>Withdraw via commands; functionality may be limited</li>
-          <li>Material changes announced 30 days in advance; re‑consent where needed</li>
+          <li>Material changes announced 30 days in advance; re-consent where needed</li>
         </ul>
+        <p><strong>Strong confirmation (2FA):</strong> Enabling auto-trading or accepting high-risk offers requires a per-user PIN inside the bot. Keep your PIN and Telegram account secure. If you suspect compromise, revoke credentials and disable auto-trading immediately.</p>
       </section>
 
       <section>
         <h2>11) International Data Transfers (from Israel)</h2>
-        <p>Your data may be processed outside Israel (e.g., by cloud providers or brokers). We transfer personal data abroad only where a lawful transfer mechanism under Israeli law applies, such as transfer to a country with adequate protection or under a permitted alternative in the Transfer Regulations (e.g., your informed consent, performance of a contract with you, or transfer to the same controller abroad). We implement contractual, technical, and organizational safeguards and maintain records of cross-border transfers.</p>
+        <p>Your data may be processed outside Israel (e.g., by cloud providers or brokers). We transfer personal data abroad only where a lawful transfer mechanism under Israeli law applies, such as transfer to a country with adequate protection or under a permitted alternative in the Transfer Regulations (e.g., your informed consent, performance of a contract with you, or transfer to the same controller abroad). Transfers to countries without an Israeli adequacy finding (e.g., the U.S.) are made under a permitted alternative with contractual, technical, and organizational safeguards. We maintain records of cross-border transfers.</p>
       </section>
 
       <section>
         <h2>12) Incident Response &amp; Breach Notification (Israel)</h2>
-        <p>We maintain incident response procedures aligned with Israel’s Data Security Regulations. If an event meets the definition of a “Severe Security Incident,” we will notify the Israeli Privacy Protection Authority (PPA) without undue delay and, where required or where risk to you is high, notify affected users with guidance on protective steps. We document incidents, remediation, and follow-up verification.</p>
-
+        <p>We maintain incident response procedures aligned with Israel’s Data Security Regulations. If an event meets the definition of a “Severe Security Incident,” we will notify the Israeli Privacy Protection Authority (PPA) without undue delay and notify affected users within <strong>72 hours</strong> where required or where risk to you is high, via in-bot message and, if available, email. We document incidents, remediation, and follow-up verification.</p>
       </section>
 
       <section>
         <h2>13) Children’s Privacy</h2>
-        <p>For adults (18+) only. We terminate accounts reasonably believed to belong to minors and delete related data.</p>
+        <p>This service is for adults (18+) only. We rely on self-attestation for age. If we learn an account belongs to a minor, we will promptly terminate it and delete related data.</p>
       </section>
 
       <section>
         <h2>14) Changes</h2>
-        <p>We may update this Policy. Material changes: 30‑day in‑Bot notice (and email if available). See effective date/version at top.</p>
+        <p>We may update this Policy. Material changes: 30-day in-Bot notice (and email if available). See effective date/version at top.</p>
       </section>
 
       <section>
         <h2>15) Contact &amp; Complaints</h2>
-      
+
         <h3>15.1 Privacy Contact</h3>
         <p>
-          <strong>Controller:</strong> Personal Trader Bot<br>
-          <strong>Email:</strong> <a href="mailto:koren.benezra10@gmail.com">koren.benezra10@gmail.com</a><br>
-          <strong>Postal (optional):</strong> [Company/Attn: Privacy], [Street], [City], [Postal Code], Israel
+          <strong>Controller (Legal Entity):</strong> Personal Trader Bot [Ltd.] (Reg. No. [_______])<br>
+          <strong>Database Registration No. (if applicable):</strong> [_______]<br>
+          <strong>Address:</strong> [Street], [City], [Postal Code], Israel<br>
+          <strong>Email:</strong> <a href="mailto:koren.benezra10@gmail.com">koren.benezra10@gmail.com</a>
         </p>
         <p class="small">
           You can use in-bot commands (e.g., <code>/export_data</code>, <code>/unsubscribe</code>) or email us for:
           access/export, correction, deletion, consent withdrawal, and general privacy inquiries. We may ask for
-          reasonable identity verification. We aim to respond within 30 days.
+          reasonable identity verification (Telegram account ID + one-time code challenge). We aim to respond within 30 days.
         </p>
-      
+
         <h3>15.2 Regulatory Authority (Israel)</h3>
         <p>
           <strong>Supervisory authority:</strong> Israeli Privacy Protection Authority (PPA) (including the Registrar of Databases).<br>
           You may submit a complaint to the PPA if you believe your rights under Israeli privacy law have been infringed.
           We will cooperate with the PPA and follow its lawful directions.
         </p>
-      
+
         <p class="small muted">
           If you are located outside Israel, you may also have the right to contact your local data protection authority
           (e.g., EEA/UK DPAs) or, for California residents, the CPPA. We will handle requests in accordance with the laws
           that apply to you.
         </p>
       </section>
-
 
       <section>
         <h2>16) Privacy Commands</h2>
@@ -396,11 +431,12 @@
 
       <section>
         <h2>17) Additional Disclosures</h2>
+
         <h3>Data We Process vs. Telegram</h3>
-        <p>We process what’s necessary for trading/portfolio features. Telegram separately processes your messages and metadata per its policies.</p>
+        <p><strong>Telegram bots are not end-to-end encrypted.</strong> Do not send secrets in regular messages. Use only the bot’s secure credential flow. Telegram independently processes message content and metadata under its own terms; we are not responsible for Telegram’s processing, security, outages, or delivery.</p>
 
         <h3>Automated Trading</h3>
-        <p>Off by default. Requires explicit opt‑in. You control enabling/disabling and order settings.</p>
+        <p>Off by default. Requires explicit opt-in. You control enabling/disabling and order settings.</p>
 
         <h3>Financial Risk</h3>
         <p>Trading involves risk. This Policy covers privacy/security—not investment advice.</p>
@@ -409,11 +445,38 @@
       <section>
         <h2>18) Operational Third Parties</h2>
         <ul>
-          <li><strong>Brokers/APIs:</strong> e.g., Alpaca Markets, Inc.</li>
-          <li><strong>Messaging:</strong> Telegram</li>
-          <li><strong>Cloud/IT:</strong> [Your Cloud Provider]</li>
+          <li><strong>Hosting:</strong> [Provider], region: [e.g., eu-central-1 or us-east-1]</li>
+          <li><strong>Broker/API:</strong> Alpaca Markets, Inc. (execution &amp; portfolio data)</li>
+          <li><strong>Monitoring/Logs:</strong> [e.g., Sentry/Datadog] (if used)</li>
           <li><strong>Market data:</strong> [Your Market Data Vendor]</li>
         </ul>
+        <p class="small muted">Full, current list of processors is available on request.</p>
+      </section>
+
+      <section>
+        <h2>19) No Advice, No Brokerage, Execution-Only</h2>
+        <p>The bot and all communications are for informational and operational purposes only and <strong>do not constitute investment advice, recommendations, portfolio management, or a solicitation</strong>. We are not a broker-dealer, portfolio manager, investment adviser, or custodian. We do not hold client funds or securities. All decisions to trade are yours; you must evaluate suitability and risk.</p>
+        <p><strong>Market data &amp; latency:</strong> Quotes and signals may be delayed, incomplete, or unavailable. We do not warrant accuracy, timeliness, or availability of market data.</p>
+      </section>
+
+      <section>
+        <h2>20) Limitation of Liability &amp; Indemnity</h2>
+        <p><strong>Limitation:</strong> To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages; loss of profits, revenue, goodwill, data, or trading opportunities; or slippage, execution failures, outages, delays, errors, or inaccuracies, arising from or relating to your use of the bot, third-party platforms (e.g., Telegram, brokers, market-data providers), or internet/connectivity issues.</p>
+        <p><strong>Cap:</strong> To the extent liability cannot be excluded, our aggregate liability for all claims shall not exceed the <em>greater of</em> (a) the amounts you paid us (if any) in the 12 months preceding the claim, or (b) USD 100.</p>
+        <p><strong>No exclusion for bad acts:</strong> Nothing in this Policy excludes liability where such exclusion is not permitted by law, including for fraud or willful misconduct.</p>
+        <p><strong>Your responsibilities:</strong> You are solely responsible for your trading decisions, credentials, account security (including device/Telegram security and your in-bot PIN), risk settings, and compliance with your local laws.</p>
+        <p><strong>Indemnity:</strong> You agree to indemnify and hold us harmless from claims, losses, or liabilities arising from your misuse of the bot, violation of this Policy or applicable law, or instructions/orders placed from your account.</p>
+      </section>
+
+      <section>
+        <h2>21) Third-Party Services, Outages &amp; Force Majeure</h2>
+        <p>We rely on third parties (e.g., Telegram, brokers, market-data and cloud providers). We do not control their availability, performance, security, or terms. The bot may be unavailable or degraded due to third-party or network issues.</p>
+        <p><strong>Force majeure:</strong> We are not responsible for failures or delays caused by events beyond our reasonable control, including internet outages, cyberattacks, power failures, natural disasters, regulatory actions, or third-party service failures.</p>
+      </section>
+
+      <section>
+        <h2>22) Terms of Service</h2>
+        <p>This Privacy Policy covers privacy only. Trading and platform use are governed by our <strong>Terms of Service</strong>, which include execution-only operation, no-advice, liability limits, and dispute terms. You must accept the Terms in-bot before trading features are enabled.</p>
       </section>
 
       <hr>
